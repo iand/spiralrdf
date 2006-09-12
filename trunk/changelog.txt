@@ -1,0 +1,72 @@
+Version 0.35 beta3
+- CHG: Renamed StatementCollection to ResourceStatementCollection to better express intent
+- CHG: Refactored BacktrackingQuerySolver AGAIN!
+- NEW: Introduced QueryGroup interface and subclasses to form syntax tree for queries
+- NEW: Added UnknownGraphMemberException
+- NEW: Added Bindings and BindingsComparer
+- ENH: Implemented sorting support in BacktrackingQuerySolver
+
+Version 0.35 beta2
+- NEW: Added basic support for constraints to BacktrackingQuerySolver
+- NEW: Added SemPlan.Spiral.Expressions namespace for constraint expressions
+- NEW: Added Describe support for Sparql queries
+- NEW: Implemented Dispose methods on DatabaseTripleStore and MemoryTripleStore
+- CHG: TripleStore interface derives from IDisposable
+- NEW: Refactored TripleStore interface, extracted new interfaces StatementCollection
+       and ResourceMap
+- NEW: Added GetDescriptionOf to TripleStore interface
+- NEW: Added CbdBoundingStrategy class
+- NEW: Added BoundingStrategy interface
+- NEW: Added ConciseBoundedDescription class
+- NEW: Added ResourceDescription interface
+- NEW: Support for non-nested alternate groups in BacktrackingQuerySolver
+- NEW: Support for non-nested optional groups in BacktrackingQuerySolver
+- ENH: Radically simplified BacktrackingQuerySolver
+- CHG: Rationalised interface hierarchy
+- NEW: Added SparqlResultsFormatBuilderClass
+- NEW: Added SparqlQuery class
+- NEW: Added Query.ResultOffset which denotes the number of results to skip before
+       returning results
+- NEW: Added Query.ResultLimit which denotes the maximum number of results to
+       be returned
+- NEW: Added GetTripleStore method to TripleStoreFactory interface which allows
+       triple stores with known URIs to be accessed.
+- NEW: Added IsDistinct to Query to denote that the query should return distinct
+       results   
+- CHG: Query.AddOptionalPattern is now deprecated, 
+       Use PatternGroup.OptionalGroup.AddPattern instead
+- CHG: Query.DistinctVariables is now deprecated, use Variables instead
+- CHG: Query.AddDistinct is now deprecated, use AddVariable and IsDistinct instead
+- NEW: Added SelectAll to Query to denote that all variables used in patterns are to be
+       selected for the result 
+- BUG: Fixed Pattern.Equals method which was inadvertently referring to Statement
+- CHG: MySQL tables are now MyISAM by default, rather than InnoDB
+- ENH: Added indexes on nodeHash and resourceHash in ResourceNodes table
+- ENH: Added write caching to DatabaseTripleStore which is now 20x faster at 
+       inserting large numbers of triples.
+- ENH: Better error handling and reporting from Sparql parser
+- ENH: Large performance improvement in Resource and BlankNode comparisons
+- NEW: Added Shootout example which is a port of the Simile project's
+       performance tester
+- ENH: Added RequiresMySql category attribute to DatabaseTripleStore tests
+       These are excluded by default from nunit testing in build file
+- NEW: Added KnowledgeBase from Carp project - to better support Sparql
+- NEW: Added ParserSelecter, the start of a smart content parser
+
+Version 0.34
+- ENH: Case insensitive keywords in Sparql parser
+- NEW: Support for optional triple patterns in queries, i.e. ones that
+       bind if there is a match, but do not fail the quiery if no triples
+       match.
+
+Version 0.33
+- NEW: Preliminary support for Sparql in SemPlan.Spiral.Sparql.
+
+Version 0.32
+- BUG: BacktrackingQuerySolver was not reseting triple enumerator
+       (patch supplied by Dušan Jan, also spotted by Sam Tunnicliffe
+        who supplied a test case)
+
+
+
+Key: BUG - bug fix, ENH - enhancement, CHG - change, NEW - new feature
