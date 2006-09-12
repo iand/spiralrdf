@@ -1,0 +1,459 @@
+<?xml version="1.0" ?>
+<project name="SemPlan.Spiral" default="test">
+    <!-- need to change mono version in Nant.exe.config to correspond to installed version of mono -->
+    
+   <property name="nant.settings.currentframework" value="net-1.1"/>
+<!-- need net-1.1 to compile ICalParser.dll -->
+<!--
+<property name="nant.settings.currentframework" value="mono-1.0"/>
+   <property name="nant.settings.currentframework" value="net-1.1"/>
+-->
+
+
+    <echo message="Build script version $Id: project.build,v 1.20 2006/02/13 23:47:52 ian Exp $"/>
+    <echo message="Using '${nant.settings.currentframework}' framework on '${nant.platform.name}' platform."/>
+    
+    <!-- global project settings -->
+    <property name="nant.project.basedir" value="${project::get-base-directory()}"/>
+    <property name="project.config" value="debug" /> <!-- debug|release -->
+    <property name="project.version" value="0.35-beta3" overwrite="false" />
+
+    <property name="project.name" value="SemPlan.Spiral" />
+    <property name="project.src.dir" value="src"/>
+    <property name="project.examples.dir" value="examples"/>
+
+    <property name="project.core.dir" value="src/${project.name}.Core"/>
+    <property name="project.tests.core.dir" value="src/${project.name}.Tests.Core"/>
+
+    <property name="project.utility.dir" value="src/${project.name}.Utility"/>
+    <property name="project.tests.utility.dir" value="src/${project.name}.Tests.Utility"/>
+
+    <property name="project.expressions.dir" value="src/${project.name}.Expressions"/>
+    <property name="project.tests.expressions.dir" value="src/${project.name}.Tests.Expressions"/>
+
+    <property name="project.mysql.dir" value="src/${project.name}.MySql"/>
+    <property name="project.tests.mysql.dir" value="src/${project.name}.Tests.MySql"/>
+
+    <property name="project.xsltparser.dir" value="src/${project.name}.XsltParser"/>
+    <property name="project.tests.xsltparser.dir" value="src/${project.name}.Tests.XsltParser"/>
+
+    <property name="project.icalparser.dir" value="src/${project.name}.ICalParser"/>
+    <property name="project.tests.icalparser.dir" value="src/${project.name}.Tests.ICalParser"/>
+
+    <property name="project.driveparser.dir" value="src/${project.name}.DriveParser"/>
+    <property name="project.tests.driveparser.dir" value="src/${project.name}.Tests.DriveParser"/>
+
+    <property name="project.turtle.dir" value="src/${project.name}.Turtle"/>
+    <property name="project.tests.turtle.dir" value="src/${project.name}.Tests.Turtle"/>
+
+    <property name="project.sparql.dir" value="src/${project.name}.Sparql"/>
+    <property name="project.tests.sparql.dir" value="src/${project.name}.Tests.Sparql"/>
+
+
+    <target name="init" description="Initializes build properties">
+        <call target="${project.config}" />
+    </target>
+
+    <target name="debug" description="Perform a 'debug' build">
+        <property name="project.config" value="debug" />
+        <property name="build.debug" value="true" />
+        <property name="build.dir" value="${nant.project.basedir}/build/${project.name}-${project.version}-${project.config}" />
+        <property name="lib.dir" value="${nant.project.basedir}/lib" />
+        <property name="doc.filename" value="${build.dir}/bin/${project.name}.xml" />
+    </target>
+
+    <target name="release" description="Perform a 'release' build">
+        <property name="project.config" value="release" />
+        <property name="build.debug" value="false" />
+        <property name="build.dir" value="${nant.project.basedir}/build/${project.name}-${project.version}" />
+        <property name="lib.dir" value="${nant.project.basedir}/lib" />
+        <property name="doc.filename" value="${build.dir}/bin/${project.name}.xml" />
+    </target>
+
+
+    <target name="build" depends="init" description="Builds current configuration">
+        <echo message="Build Directory is ${build.dir}" />
+        <!-- prepare build directory -->
+        <mkdir dir="${build.dir}/bin" />
+        <copy todir="${build.dir}/bin">
+            <fileset basedir="${lib.dir}">
+                <include name="Drive.Rdf.dll" />
+                <include name="Semaview.Shared.ICalParser.dll" />
+                <include name="MySql.Data.dll"/>
+            </fileset>
+        </copy>
+
+        <copy todir="${build.dir}/bin">
+            <fileset basedir="${project.xsltparser.dir}">
+                <include name="*.xsl" />
+            </fileset>
+        </copy>
+
+        <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.dll"  doc="${doc.filename}">
+           <nowarn>
+               <warning number="1591" />
+                <warning number="0067"/>
+            </nowarn>
+            <sources failonempty="true">
+                <include name="${project.core.dir}/*.cs" />
+                <include name="${project.utility.dir}/*.cs" />
+                <include name="${project.expressions.dir}/*.cs" />
+            </sources>
+        </csc>
+
+         <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.XsltParser.dll" >
+            <sources failonempty="true">
+                <include name="${project.xsltparser.dir}/*.cs" />
+            </sources>
+            <references basedir="${build.dir}/bin">
+                <include name="${project.name}.dll"/>
+            </references>
+        </csc> 
+         <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.Mysql.dll" >
+            <sources failonempty="true">
+                <include name="${project.mysql.dir}/*.cs" />
+            </sources>
+            <references basedir="${build.dir}/bin">
+                <include name="${project.name}.dll"/>
+                <include name="System.Data.dll"/>
+                <include name="MySql.Data.dll"/>
+            </references>
+        </csc>
+
+<!--         <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.ICalParser.dll" >
+            <sources failonempty="true">
+                <include name="${pro  ject.icalparser.dir}/*.cs" />
+            </sources>
+            <references basedir="${build.dir}/bin">
+                <include name="${project.name}.dll"/>
+                <include name="${project.name}.XsltParser.dll"/>
+                <include name="Semaview.Shared.ICalParser.dll"/>
+            </references>
+        </csc>
+ -->
+<!--         <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.DriveParser.dll" >
+            <sources failonempty="true">
+                <include name="${project.driveparser.dir}/*.cs" />
+            </sources>
+            <references basedir="${build.dir}/bin">
+                <include name="${project.name}.dll"/>
+                <include name="${lib.dir}/Drive.Rdf.dll"/>
+            </references>
+        </csc>
+ -->
+
+         <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.Sparql.dll" >
+            <sources failonempty="true">
+                <include name="${project.sparql.dir}/*.cs" />
+            </sources>
+            <references basedir="${build.dir}/bin">
+                <include name="${project.name}.dll"/>
+            </references>
+        </csc>
+
+
+    </target>
+
+    <target name="test" depends="build">
+		<echo message="Lib Directory is '${lib.dir}'."/>
+        <!-- copy framework-neutral libraries -->
+        <copy todir="${build.dir}/bin">
+            <fileset basedir="${lib.dir}">
+                <include name="Drive.Rdf.dll" />
+                <include name="Semaview.Shared.ICalParser.dll" />
+            </fileset>
+        </copy>
+
+        <copy todir="${build.dir}/bin">
+            <fileset basedir="${project.xsltparser.dir}">
+                <include name="RdfXmlToTriples.xsl" />
+                <include name="RdfXmlValidator.xsl" />
+            </fileset>
+        </copy>
+
+
+        <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}-tests.dll" >
+           <nowarn>
+               <warning number="0067" />
+                <warning number="0219"/>
+            </nowarn>
+            <sources failonempty="false">
+                <include name="${project.tests.core.dir}/*.cs" />
+                <include name="${project.tests.utility.dir}/*.cs" />
+                <include name="${project.tests.xsltparser.dir}/*.cs" />
+                <include name="${project.tests.sparql.dir}/*.cs" />
+                <include name="${project.tests.mysql.dir}/*.cs" />
+                <include name="${project.tests.expressions.dir}/*.cs" />
+            </sources>
+
+            <references basedir="${build.dir}/bin">
+                <include name="${lib.dir}/NUnit.Framework.dll"/>
+                <include name="${project.name}.dll"/>
+                <include name="${project.name}.XsltParser.dll"/>
+                <include name="${project.name}.Sparql.dll"/>
+                <include name="${project.name}.Mysql.dll"/>
+            </references>
+        </csc>
+
+        
+<!--         <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.DriveParser-tests.dll" >
+            <sources failonempty="false">
+                <include name="${project.tests.driveparser.dir}/*.cs" />
+            </sources>
+
+            <references basedir="${build.dir}/bin">
+                <include name="${lib.dir}/NUnit.Framework.dll"/>
+                <include name="${project.name}.dll"/>
+                <include name="${project.name}-tests.dll"/>
+                <include name="${project.name}.DriveParser.dll"/>
+                <include name="Drive.Rdf.dll"/>
+            </references>
+        </csc> -->
+
+
+<!--         <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.ICalParser-tests.dll" >
+            <sources failonempty="false">
+                <include name="${project.tests.icalparser.dir}/*.cs" />
+            </sources>
+
+            <references basedir="${build.dir}/bin">
+                <include name="${lib.dir}/NUnit.Framework.dll"/>
+                <include name="${project.name}.dll"/>
+                <include name="${project.name}-tests.dll"/>
+                <include name="${project.name}.XsltParser.dll"/>
+                <include name="${project.name}.ICalParser.dll"/>
+                <include name="Semaview.Shared.ICalParser.dll" />
+            </references>
+        </csc> -->
+
+
+        <nunit2 failonerror="false">
+          <formatter type="Plain" />
+          <test appconfig="${lib.dir}/SemPlan.Spiral.dll.config">
+            <assemblies>
+                <include name="${build.dir}/bin/*-tests.dll"/>
+             </assemblies>
+            <categories>
+                <exclude name="KnownFailures" />
+                <exclude name="RequiresMySql" />
+<!--                <exclude name="RequiresMySql" /> -->
+<!--                <exclude name="DatabaseQuerySolver" /> -->
+            </categories>
+          </test>
+        </nunit2>
+
+        <call target="build-examples" />
+
+    </target>
+
+
+    <target name="build-examples" depends="init">
+
+        <csc target="exe" output="${build.dir}/bin/Query.exe"  debug="${build.debug}">
+            <sources>
+                <include name="${project.examples.dir}/Query/*.cs"/>
+            </sources>
+
+            <references basedir="${build.dir}/bin">
+                <include name="SemPlan.Spiral.dll"/>
+                <include name="SemPlan.Spiral.XsltParser.dll"/>
+            </references>
+
+        </csc>
+
+        <csc target="exe" output="${build.dir}/bin/RdfDumper.exe"  debug="${build.debug}">
+            <sources>
+                <include name="${project.examples.dir}/RdfDumper/*.cs"/>
+            </sources>
+
+            <references basedir="${build.dir}/bin">
+                <include name="SemPlan.Spiral.dll"/>
+                <include name="SemPlan.Spiral.XsltParser.dll"/>
+            </references>
+
+        </csc>
+
+        <csc target="exe" output="${build.dir}/bin/Shootout.exe"  debug="${build.debug}">
+            <sources>
+                <include name="${project.examples.dir}/Shootout/*.cs"/>
+            </sources>
+
+            <references basedir="${build.dir}/bin">
+                <include name="SemPlan.Spiral.dll"/>
+                <include name="SemPlan.Spiral.XsltParser.dll"/>
+                <include name="SemPlan.Spiral.Mysql.dll"/>
+            </references>
+        </csc>
+
+        <csc target="exe" output="${build.dir}/bin/rkit.exe"  debug="${build.debug}">
+            <sources>
+                <include name="${project.examples.dir}/RKit/*.cs"/>
+            </sources>
+
+            <references basedir="${build.dir}/bin">
+                <include name="SemPlan.Spiral.dll"/>
+                <include name="SemPlan.Spiral.XsltParser.dll"/>
+                <include name="SemPlan.Spiral.Mysql.dll"/>
+                <include name="SemPlan.Spiral.Sparql.dll"/>
+            </references>
+        </csc>
+
+
+    </target>
+  
+
+
+    <target name="clean"  depends="init" description="Deletes current build configuration">
+        <delete dir="${build.dir}" failonerror="false" />
+    </target>
+
+
+    <target name="doc"  depends="init">
+
+      <ndoc>
+        <assemblies basedir="${build.dir}/bin">
+            <include name="${project.name}.dll" />
+        </assemblies>
+        <summaries basedir="${project.src.dir}">
+            <include name="namespace-docs.xml" />
+        </summaries>
+        <documenters>
+            <documenter name="MSDN">
+                <property name="OutputDirectory" value="${build.dir}/doc" />
+                <property name="OutputTarget" value="Web" />
+<!--
+                <property name="HtmlHelpName" value="Carp" />
+                <property name="HtmlHelpCompilerFilename" value="hhc.exe" />
+-->
+                <property name="IncludeFavorites" value="False" />
+                <property name="Title" value="Spiral: Semantic Planet RDF Library" />
+                <property name="SplitTOCs" value="False" />
+                <property name="DefaulTOC" value="" />
+                <property name="ShowVisualBasic" value="True" />
+                <property name="ShowMissingSummaries" value="True" />
+                <property name="ShowMissingRemarks" value="False" />
+                <property name="ShowMissingParams" value="True" />
+                <property name="ShowMissingReturns" value="True" />
+                <property name="ShowMissingValues" value="True" />
+                <property name="DocumentInternals" value="False" />
+                <property name="DocumentProtected" value="True" />
+                <property name="DocumentPrivates" value="False" />
+                <property name="DocumentEmptyNamespaces" value="False" />
+                <property name="IncludeAssemblyVersion" value="False" />
+                <property name="CopyrightText" value="&#169; Ian Davis and James Carlyle" />
+                <property name="CopyrightHref" value="http://www.semanticplanet.com/" />
+             </documenter>
+        </documenters> 
+    </ndoc>
+
+    </target>
+
+
+
+    <target name="dist">
+      <property name="project.config" value="release" />
+      <call target="clean" />
+      <call target="build" />
+      <call target="build-examples" />
+      <call target="doc" />
+
+      <mkdir dir="dist" />
+
+      <delete dir="dist/bin-tmp" failonerror="false" />
+      <mkdir dir="dist/bin-tmp" />
+      <copy todir="dist/bin-tmp">
+          <fileset basedir="${build.dir}/bin">
+              <include name="${project.name}.dll"/>
+              <include name="${project.name}.XsltParser.dll" />
+              <include name="${project.name}.ICalParser.dll" />
+              <include name="${project.name}.DriveParser.dll" />
+              <include name="${project.name}.Mysql.dll" />
+              <include name="${project.name}.Sparql.dll" />
+              <include name="*.xsl" />
+          </fileset>
+        </copy>
+
+       <copy todir="dist/bin-tmp">
+          <fileset basedir=".">
+              <include name="license.txt"/>
+              <include name="readme.txt"/>
+              <include name="*.rdf" />
+              <include name="${project.mysql.dir}/*.sql" />
+          </fileset>
+      </copy>
+
+      <zip zipfile="dist/${project.name}-${project.version}.zip">
+          <fileset basedir="dist/bin-tmp">
+              <include name="*.*"/>
+          </fileset>
+      </zip>
+      <delete dir="dist/bin-tmp" failonerror="false" />
+
+      <zip zipfile="dist/${project.name}-src-${project.version}.zip">
+          <fileset>
+              <include name="license.txt"/>
+              <include name="readme.txt"/>
+              <include name="project.build"/>
+              <include name="*.rdf" />
+              <include name="${project.core.dir}/*.cs" />
+              <include name="${project.utility.dir}/*.cs" />
+              <include name="${project.xsltparser.dir}/*.cs" />
+              <include name="${project.driveparser.dir}/*.cs" />
+              <include name="${project.icalparser.dir}/*.cs" />
+              <include name="${project.mysql.dir}/*.cs" />
+              <include name="${project.sparql.dir}/*.cs" />
+              <include name="${project.mysql.dir}/*.sql" />
+              <include name="${project.tests.core.dir}/*.cs" />
+              <include name="${project.tests.utility.dir}/*.cs" />
+              <include name="${project.tests.xsltparser.dir}/*.cs" />
+              <include name="${project.tests.driveparser.dir}/*.cs" />
+              <include name="${project.tests.icalparser.dir}/*.cs" />
+              <include name="${project.tests.mysql.dir}/*.cs" />
+              <include name="${project.tests.sparql.dir}/*.cs" />
+              <include name="examples/RdfDumper/RdfDumper.cs" />
+              <include name="examples/RdfDumper/readme.txt" />
+              <include name="examples/Query/Query.cs" />
+              <include name="examples/Query/readme.txt" />
+              <include name="examples/Query/bloggers.rdf" />
+              <include name="examples/Query/*.config" />
+              <include name="examples/Shootout/*.cs" />
+              <include name="examples/Shootout/*.txt" />
+              <include name="examples/Shootout/*.config" />
+              <include name="examples/RKit/*.cs" />
+              <include name="examples/RKit/*.txt" />
+              <include name="examples/RKit/*.config" />
+          </fileset>
+      </zip>
+
+      <zip zipfile="dist/${project.name}-doc-${project.version}.zip">
+          <fileset basedir="${build.dir}/doc">
+              <include name="*.*" />
+          </fileset>
+      </zip>
+
+      <mkdir dir="dist/bin-tmp" />
+      <copy todir="dist/bin-tmp">
+          <fileset basedir="${build.dir}/bin">
+              <include name="Shootout.exe"/>
+              <include name="RdfDumper.exe" />
+              <include name="Query.exe" />
+          </fileset>
+        </copy>
+
+       <copy todir="dist/bin-tmp">
+          <fileset basedir=".">
+              <include name="license.txt"/>
+              <include name="readme.txt"/>
+              <include name="*.rdf" />
+          </fileset>
+      </copy>
+
+      <zip zipfile="dist/${project.name}-examples-${project.version}.zip">
+          <fileset basedir="dist/bin-tmp">
+              <include name="*.*"/>
+          </fileset>
+      </zip>
+      <delete dir="dist/bin-tmp" failonerror="false" />
+
+    </target>
+</project>
