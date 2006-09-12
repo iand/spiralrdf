@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- $Id: bloggers.rdf,v 1.1 2005/10/03 15:52:53 ian Exp $ -->
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:rss="http://purl.org/rss/1.0/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:html="http://www.w3.org/1999/xhtml">
+	<foaf:Agent rdf:nodeID="wayne-allen">
+		<foaf:name>Wayne Allen</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://weblogs.asp.net/wallen/">
+				<dc:title>Wayne Allen's Weblog</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://weblogs.asp.net/wallen/Rss.aspx">
+						<foaf:maker rdf:nodeID="wayne-allen"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="marty-andrews">
+		<foaf:name>Marty Andrews</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.wrytradesman.com/blog/">
+				<dc:title>Wry Tradesman</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.wrytradesman.com/blog/index.rdf">
+						<foaf:maker rdf:nodeID="marty-andrews"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="dave-astels">
+		<foaf:name>Dave Astels</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.artima.com/weblogs/index.jsp?blogger=dastels">
+				<dc:title>Shift Your Paradigm!</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.artima.com/weblogs/feeds/bloggers/dastels.rss">
+						<foaf:maker rdf:nodeID="dave-astels"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="james-bach">
+		<foaf:name>James Bach</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://blackbox.cs.fit.edu/blog/james/">
+				<dc:title>James Bach's Blog</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://blackbox.cs.fit.edu/blog/james/archives/categories/software_testing_and_quality/index.xml">
+						<foaf:maker rdf:nodeID="james-bach"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+	<foaf:Agent rdf:nodeID="marcus-baker">
+		<foaf:name>Marcus Baker</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.lastcraft.com/blog/">
+				<dc:title>Hello world!</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.lastcraft.com/blog/wp-rss2.php">
+						<foaf:maker rdf:nodeID="marcus-baker"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+
+
+	<foaf:Agent rdf:nodeID="tim-bacon">
+		<foaf:name>Tim Bacon</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://coachspot.blogspot.com/">
+				<dc:title>Coachspot by Tim Bacon</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://coachspot.blogspot.com/atom.xml">
+						<foaf:maker rdf:nodeID="tim-bacon"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+	<foaf:Agent rdf:nodeID="agile-advice">
+		<foaf:name>Mishkin Berteig (et. al.)</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.agileadvice.com/">
+				<dc:title>Agile Advice - How and Why to Work Agile</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.agileadvice.com/index.rdf">
+						<foaf:maker rdf:nodeID="agile-advice"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+	<foaf:Agent rdf:nodeID="laurent-bossavit">
+		<foaf:name>Laurent Bossavit</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://bossavit.com/thoughts/">
+				<dc:title>Incipient(thoughts) by Keith Ray</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://bossavit.com/thoughts/index.rdf">
+						<foaf:maker rdf:nodeID="laurent-bossavit"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="ward-cunningham">
+		<foaf:name>Ward Cunningham</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.artima.com/weblogs/index.jsp?blogger=ward">
+				<dc:title>Ward Says, Don't Try This at Home</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.artima.com/weblogs/feeds/bloggers/ward.rss">
+						<foaf:maker rdf:nodeID="ward-cunningham"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+	<foaf:Agent rdf:nodeID="ian-davis">
+		<foaf:name>Ian Davis</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://internetalchemy.org/">
+				<dc:title>Internet Alchemy</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://internetalchemy.org/categories/agile-planet.rdf">
+						<foaf:maker rdf:nodeID="ian-davis"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+
+	<foaf:Agent rdf:nodeID="esther-derby">
+		<foaf:name>Esther Derby</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.estherderby.com/weblog/blogger.html">
+				<dc:title>Software (Management) Process Improvement</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.estherderby.com/weblog/RSS/blogger_rss.xml">
+						<foaf:maker rdf:nodeID="esther-derby"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="dale-emery">
+		<foaf:name>Dale Emery</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.dhemery.com/cwd/">
+				<dc:title>Conversations with Dale</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.dhemery.com/cwd/index.xml">
+						<foaf:maker rdf:nodeID="dale-emery"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="michael-feathers">
+		<foaf:name>Michael Feathers</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.artima.com/weblogs/index.jsp?blogger=mfeathers">
+				<dc:title>Let's Reconsider That</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.artima.com/weblogs/feeds/bloggers/mfeathers.rss">
+						<foaf:maker rdf:nodeID="michael-feathers"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="martin-fowler">
+		<foaf:name>Martin Fowler</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://martinfowler.com/bliki/">
+				<dc:title>Martin Fowler's Bliki</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://martinfowler.com/bliki/bliki.rss">
+						<foaf:maker rdf:nodeID="martin-fowler"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="martin-fowler-2">
+		<foaf:name>Martin Fowler</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://martinfowler.com/">
+				<dc:title>Updates to martinfowler.comi</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://martinfowler.com/updates.rss">
+						<foaf:maker rdf:nodeID="martin-fowler-2"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="perryn-fowler">
+		<foaf:name>Perryn Fowler</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://jroller.com/page/perryn">
+				<dc:title>Perryn Fowler's Weblog</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.jroller.com/rss/perryn">
+						<foaf:maker rdf:nodeID="perryn-fowler"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="darren-hobbs">
+		<foaf:name>Darren Hobbs</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.darrenhobbs.com/">
+				<dc:title>Darren Hobbs Weblog</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.darrenhobbs.com/index.rdf">
+						<foaf:maker rdf:nodeID="darren-hobbs"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="ron-jeffries">
+		<foaf:name>Ron Jeffries</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.artima.com/weblogs/index.jsp?blogger=rejeffries">
+				<dc:title>As Simple as Possible</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.artima.com/weblogs/feeds/bloggers/rejeffries.rss">
+						<foaf:maker rdf:nodeID="ron-jeffries"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="brian-marick">
+		<foaf:name>Brian Marick</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.testing.com/cgi-bin/blog/">
+				<dc:title>Exploration Through Example</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.testing.com/cgi-bin/blog/index.rss">
+						<foaf:maker rdf:nodeID="brian-marick"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="robert-martin">
+		<foaf:name>Robert C. Martin</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.artima.com/weblogs/index.jsp?blogger=unclebob">
+				<dc:title>Uncle Bob's Software Craftsmanship Corner</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.artima.com/weblogs/feeds/bloggers/unclebob.rss">
+						<foaf:maker rdf:nodeID="robert-martin"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="chris-matts">
+		<foaf:name>Chris Matts</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://abc.truemesh.com/">
+				<dc:title>Agile Business Coach</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://abc.truemesh.com/index.rdf">
+						<foaf:maker rdf:nodeID="chris-matts"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="jimmy-nilsson">
+		<foaf:name>Jimmy Nilsson</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.jnsk.se/weblog/">
+				<dc:title>Jimmy Nilsson's Weblog</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.jnsk.se/weblog/rss.xml">
+						<foaf:maker rdf:nodeID="jimmy-nilsson"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="darrell-norton">
+		<foaf:name>Darrell Norton</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://dotnetjunkies.com/WebLog/darrell.norton/">
+				<dc:title>Darrell Norton's Blog</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://dotnetjunkies.com/WebLog/darrell.norton/Rss.aspx">
+						<foaf:maker rdf:nodeID="darrell-norton"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="bret-pettichord">
+		<foaf:name>Bret Pettichord</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.io.com/~wazmo/blog/">
+				<dc:title>Testing Hotlist Update</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.io.com/~wazmo/blog/index.xml">
+						<foaf:maker rdf:nodeID="bret-pettichord"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="keith-ray">
+		<foaf:name>Keith Ray</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://homepage.mac.com/keithray/blog">
+				<dc:title>MemoRanda by Keith Ray</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://homepage.mac.com/keithray/blog/index.rss">
+						<foaf:maker rdf:nodeID="keith-ray"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="mike-roberts">
+		<foaf:name>Mike Roberts</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://mikeroberts.thoughtworks.net/blog/">
+				<dc:title>Blogtastic</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://mikeroberts.thoughtworks.net/blog/rss/Blogtastic.rss">
+						<foaf:maker rdf:nodeID="mike-roberts"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="christian-sepulveda">
+		<foaf:name>Christian Sepulveda</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://christiansepulveda.com/blog/">
+				<dc:title>Christian Sepulveda's Blog</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://christiansepulveda.com/blog/index.xml">
+						<foaf:maker rdf:nodeID="christian-sepulveda"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+	<foaf:Agent rdf:nodeID="jim-shore">
+		<foaf:name>James Shore</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.jamesshore.com/Blog/">
+				<dc:title>Successful Software</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.jamesshore.com/Blog/index.rss">
+						<foaf:maker rdf:nodeID="jim-shore"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+	<foaf:Agent rdf:nodeID="chris-stevenson">
+		<foaf:name>Chris Stevenson</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://www.skizz.biz/">
+				<dc:title>chris-stevenson</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://www.skizz.biz/index.xml">
+						<foaf:maker rdf:nodeID="chris-stevenson"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="jeff-sutherland">
+		<foaf:name>Jeff Sutherland</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://jeffsutherland.com/">
+				<dc:title>Jeff Sutherland's Object Technology Web Site</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://jeffsutherland.com/rss.xml">
+						<foaf:maker rdf:nodeID="jeff-sutherland"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	
+	
+
+	<foaf:Agent rdf:nodeID="willemvandenende">
+		<foaf:name>Willem van den Ende</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://ruminations.willemvandenende.com/rublog/rublog.cgi">
+				<dc:title>Rants and Ruminations - Willems' column</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://ruminations.willemvandenende.com/rublog/rublog.cgi/index.rss">
+						<foaf:maker rdf:nodeID="willemvandenende"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	
+	<foaf:Agent rdf:nodeID="greg-vaughn">
+		<foaf:name>Greg Vaughn</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://gigavolt.net/blog">
+				<dc:title>Potential Differences</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://gigavolt.net/blog/index.rss">
+						<foaf:maker rdf:nodeID="greg-vaughn"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="joe-walnes">
+		<foaf:name>Joe Walnes</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://joe.truemesh.com/blog/">
+				<dc:title>Joe Walnes</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://joe.truemesh.com/blog/index.rdf">
+						<foaf:maker rdf:nodeID="joe-walnes"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+	<foaf:Agent rdf:nodeID="robert-watkins">
+		<foaf:name>Robert Watkins</foaf:name>
+		<foaf:weblog>
+			<foaf:Document rdf:about="http://twasink.net/blog/">
+				<dc:title>Software is too expensive to build cheaply... by Robert Watkins</dc:title>
+				<rdfs:seeAlso>
+					<rss:channel rdf:about="http://twasink.net/blog/archives/Agile%20Development.xml">
+						<foaf:maker rdf:nodeID="robert-watkins"/>
+					</rss:channel>
+				</rdfs:seeAlso>
+			</foaf:Document>
+		</foaf:weblog>
+	</foaf:Agent>
+
+
+
+
+
+</rdf:RDF>
