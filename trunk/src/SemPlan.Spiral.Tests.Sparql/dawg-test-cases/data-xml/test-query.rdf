@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Vocabulary for query test cases</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:creator xmlns:ns0="http://purl.org/dc/elements/1.1/">Andy Seaborne</ns0:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:subject xmlns:ns0="http://purl.org/dc/elements/1.1/"></ns0:subject>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:publisher xmlns:ns0="http://purl.org/dc/elements/1.1/">W3C RDF Data Access Working Group</ns0:publisher>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:title xmlns:ns0="http://purl.org/dc/elements/1.1/">Query test case vocabulary</ns0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:description xmlns:ns0="http://purl.org/dc/elements/1.1/">Query test case vocabulary</ns0:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:date xmlns:ns0="http://purl.org/dc/elements/1.1/">2004-07</ns0:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:format xmlns:ns0="http://purl.org/dc/elements/1.1/">RDF</ns0:format>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#">
+    <ns0:identifier xmlns:ns0="http://purl.org/dc/elements/1.1/" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-query#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#QueryTest">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#QueryTest">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">The class of query tests</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#query">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#query">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">The query to ask</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#query">
+    <ns0:domain xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-query#QueryTest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#data">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#data">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Optional: data for the query test</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#data">
+    <ns0:domain xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-query#QueryTest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-query#data">
+    <ns0:range xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+  </rdf:Description>
+</rdf:RDF>

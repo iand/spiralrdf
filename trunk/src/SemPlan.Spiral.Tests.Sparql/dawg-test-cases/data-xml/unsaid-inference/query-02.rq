@@ -1,0 +1,3 @@
+PREFIX : <http://example.com/#>
+
+SELECT ?x WHERE UNSAID (?x rdf:type :C2)

@@ -1,0 +1,6 @@
+SELECT *
+WITH  <dft.n3>
+FROM  <a.n3> <b.n3>
+WHERE
+      ( ?x ?y ?z )
+      ( ?z ?r ?s )
