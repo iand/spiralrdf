@@ -1,0 +1,2 @@
+SELECT *
+WHERE SOURCE ?src (?x ?y ?z)

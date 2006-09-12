@@ -1,0 +1,47 @@
+<?xml version="1.0" ?>
+<project name="SemPlan.RdfLib" default="build">
+    <!-- need to change mono version in Nant.exe.config to correspond to installed version of mono -->
+    <!-- <property name="version" value="0.31" /> -->
+    
+    <property name="nant.settings.currentframework" value="net-1.1"/><!---->
+    <echo message="Build script version $Id: Semaview-IcalParser-project.build,v 1.1 2005/05/23 21:45:53 ian Exp $"/>
+    <echo message="Using '${nant.settings.currentframework}' framework on '${nant.platform.name}' platform."/>
+    
+    <!-- global project settings -->
+    <property name="project.config" value="debug" /> <!-- debug|release -->
+
+    <property name="project.name" value="Semaview.Shared.ICalParser" />
+    <property name="project.version" value="0.1" overwrite="false" />
+
+    <property name="project.core.dir" value="Semaview.Shared.ICalParser"/>
+
+    <target name="init" description="Initializes build properties">
+        <call target="${project.config}" />
+    </target>
+
+    <target name="debug" description="Perform a 'debug' build">
+        <property name="project.config" value="debug" />
+        <property name="build.debug" value="true" />
+        <property name="build.dir" value="${nant.project.basedir}/build/${project.name}-${project.version}-${project.config}" />
+        <property name="lib.dir" value="${nant.project.basedir}/lib" />
+    </target>
+
+    <target name="build" depends="init" description="Builds current configuration">
+        <echo message="Build Directory is ${build.dir}" />
+        <!-- prepare build directory -->
+        <mkdir dir="${build.dir}/bin" />
+
+        <csc target="library" debug="${build.debug}" output="${build.dir}/bin/${project.name}.dll" >
+            <sources failonempty="true">
+                <includes name="${project.core.dir}/*.cs" />
+            </sources>
+        </csc>
+    </target>
+
+
+    <target name="clean"  depends="init" description="Deletes current build configuration">
+        <delete dir="${build.dir}" failonerror="false" />
+    </target>
+
+
+</project>

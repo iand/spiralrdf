@@ -1,0 +1,5 @@
+SELECT *
+FROM <dft.n3> <a.n3> <b.n3>
+WHERE
+    GRAPH ?src1 ( ?x ?y ?z )
+    GRAPH ?src2 ( ?z ?r ?s )

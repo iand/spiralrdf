@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Vocabulary for DAWG test cases</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:creator xmlns:ns0="http://purl.org/dc/elements/1.1/">Andy Seaborne</ns0:creator>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:subject xmlns:ns0="http://purl.org/dc/elements/1.1/"></ns0:subject>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:publisher xmlns:ns0="http://purl.org/dc/elements/1.1/">W3C RDF Data Access Working Group</ns0:publisher>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:title xmlns:ns0="http://purl.org/dc/elements/1.1/">Vocabulary for DAWG test cases</ns0:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:description xmlns:ns0="http://purl.org/dc/elements/1.1/">Vocabulary for DAWG test cases</ns0:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:date xmlns:ns0="http://purl.org/dc/elements/1.1/">2004-07</ns0:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:format xmlns:ns0="http://purl.org/dc/elements/1.1/">RDF</ns0:format>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#">
+    <ns0:identifier xmlns:ns0="http://purl.org/dc/elements/1.1/" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultForm">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultForm">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Super class of all result forms</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryForm">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryForm">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Super class of all query forms</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Status">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Status">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Super class of all test status classes</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#resultForm">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#resultForm">
+    <ns0:range xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#resultForm">
+    <ns0:isDefinedBy xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#queryForm">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#queryForm">
+    <ns0:range xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#queryForm">
+    <ns0:isDefinedBy xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#status">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#status">
+    <ns0:range xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#status">
+    <ns0:isDefinedBy xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#status">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Status</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Contains a reference to the minutes of the RDF Data Access Working Group where the test case status was last changed.</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Approval</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#approval">
+    <ns0:sameAs xmlns:ns0="http://www.w3.org/2002/07/owl#" rdf:resource="http://www.w3.org/2000/10/rdf-tests/rdfcore/testSchema#approval"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#description">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#description">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">A human-readable summary of the test case.</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#description">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Description</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#description">
+    <ns0:sameAs xmlns:ns0="http://www.w3.org/2002/07/owl#" rdf:resource="http://www.w3.org/2000/10/rdf-tests/rdfcore/testSchema#description"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#issue">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#issue">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Contains a pointer to the associated issue on the RDF Data Access Working Group Tracking document.</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#issue">
+    <ns0:sameAs xmlns:ns0="http://www.w3.org/2002/07/owl#" rdf:resource="http://www.w3.org/2000/10/rdf-tests/rdfcore/testSchema#issue"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#issue">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Issue</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#warning">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#warning">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Indicates that while the test should pass, it may generate a warning.</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#warning">
+    <ns0:sameAs xmlns:ns0="http://www.w3.org/2002/07/owl#" rdf:resource="http://www.w3.org/2000/10/rdf-tests/rdfcore/testSchema#warning"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#warning">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Warning</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#NotClassified">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#NotClassified">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of tests that have not been classified</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#NotClassified">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">NotClassified</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of tests that are Approved</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Approved">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Approved</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Rejected">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Rejected">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of tests that are Rejected</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Rejected">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Rejected</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Obsoleted">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Obsoleted">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of tests that are Obsolete</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Obsoleted">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Obsoleted</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Withdrawn">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Status"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Withdrawn">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of tests that have been Withdrawn</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#Withdrawn">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Withdrawn</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QuerySelect">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QuerySelect">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of queries that are seeking variable bindings</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QuerySelect">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Variable Binding Query</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryConstruct">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryConstruct">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of queries that are seeking a constructed graph</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryConstruct">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Defined Graph Query</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryDescribe">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryDescribe">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of queries that are seeking a descriptive graph</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryDescribe">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Open Graph Query</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryAsk">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryAsk">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of queries that are seeking a yes/no question</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#QueryAsk">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Boolean Query</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultSet">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultSet">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of result expected to be from a SELECT query</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultSet">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Result Set</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultGraph">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultGraph">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of result expected to be a graph</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultGraph">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Graph Result</ns0:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultBoolean">
+    <ns0:subClassOf xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#" rdf:resource="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultForm"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultBoolean">
+    <ns0:comment xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Class of result expected to be a boolean</ns0:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg#ResultBoolean">
+    <ns0:label xmlns:ns0="http://www.w3.org/2000/01/rdf-schema#">Boolean Result</ns0:label>
+  </rdf:Description>
+</rdf:RDF>

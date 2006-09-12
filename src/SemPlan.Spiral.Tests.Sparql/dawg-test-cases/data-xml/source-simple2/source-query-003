@@ -1,0 +1,8 @@
+# Finds person-name restioans from same source as alice's email address
+
+PREFIX foaf: <http://xmlns.com/foaf/0.1/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+SELECT DISTINCT ?name ?mailbox
+WHERE SOURCE ?snode (?person foaf:name ?name)
+      SOURCE ?snode (?person foaf:mbox ?mailbox)
+      SOURCE ?snode (?x      foaf:mbox <mailto:bob@work>)
